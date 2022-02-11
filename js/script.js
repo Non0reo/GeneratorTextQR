@@ -16,15 +16,16 @@ async function getData(text) {
   }
 
 //Called when we need to generate a QR code
-function generate(){
+function generate(defaultText){
   if(document.getElementById("QRimage")){
     let img = document.getElementById('QRimage');
     img.parentElement.removeChild(img)
   }
   
   text = document.getElementById("textBox").value;
+  text = defaultText;
   getData(text);
 }
 
 //Generate when the website loads
-generate();
+generate(text);
