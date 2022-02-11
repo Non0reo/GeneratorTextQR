@@ -23,7 +23,7 @@ function generate(defaultText){
   }
   
   text = document.getElementById("textBox").value;
-  text = defaultText;
+  if(defaultText != undefined) text = defaultText
   getData(text);
 }
 
